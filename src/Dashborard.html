@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="keywords" content="HTML, CSS, JavaScript">
+ 
+    <script>
+      
+// function myFunction() {
+//   document.getElementById("myDropdown").classList.toggle("show");
+// }
+
+// window.onclick = function(event) {
+//   if (!event.target.matches('.dropbtn')) {
+//     var dropdowns = document.getElementsByClassName("dropdown-content");
+//     var i;
+//     for (i = 0; i < dropdowns.length; i++) {
+//       var openDropdown = dropdowns[i];
+//       if (openDropdown.classList.contains('show')) {
+//         openDropdown.classList.remove('show');
+//       }
+//     }
+//   }
+// }
+
+function Drops(){
+  
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+  for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+}
+
+    </script>
+    <link rel="stylesheet" 
+    href=
+    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../src/Style.css"/>
+  </head>
+  <body>
+    <!-- <div class="sidenav">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#clients">Clients</a>
+      <a href="#contact">Contact</a>
+      <button class="dropdown-btn" onclick="Drops()">
+        <span class="icon"><img src="../assets/storefront.png"/></span> 
+        <span class="item">Resturant</span>
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+      </div->
+      <a href="#contact">Search</a>
+    </div> -->
+    <aside class="wrapper">
+      <div class="sidebar">
+        <div class="profile">
+          <img src="../assets/own.png" width="130px" height="130px" />
+        </div>
+       <div class="sidebargroupitem" id ="side">
+        <ul>
+          <li >
+            <a href="Dashborard.html" >
+             <div class="active">
+              <span class="icon"><img src="../assets/Graph.png"/></span>
+              <span class="item" >Dashboard</span>
+             </div>
+            </a>
+          </li>
+
+          <li>
+            <a href="Sendmessage.html" class="">
+              <div class="inactive">
+                <span class="icon"><img src="../assets/Message.png" /></span>
+              <span class="item">Send Message</span>
+              </div>
+            </a>
+          </li>
+
+          <li>
+            <a href="DriverApplication.html" class="">
+              <div class="inactive">
+                <span class="icon"><img src="../assets/bxs_taxi.png"  /></span>
+              <span class="item">Driver Application</span>
+              </div>
+            </a>
+          </li>
+
+          <li>
+            <a href="Review.html" class="">
+              <div class="inactive">
+                <span class="icon"><img src="../assets/Discount.png"/></span>
+              <span class="item">Reviews</span>
+              </div>
+            </a>
+          </li>
+
+          <li>
+            <a href="BookingRequest.html" class="">
+              <div class="inactive">
+                <span class="icon"><img src="../assets/bxs_taxi.png"/></span>
+              <span class="item">Booking Request</span>
+              </div>
+            </a>
+          </li>
+
+          <li>
+            <a href="ContactEnquiries.html" class="">
+              <div class="inactive">
+                <span class="icon"><img src="../assets/Message.png"/></span>
+              <span class="item">Contact Enquiries</span>
+              </div>
+            </a>
+          </li>
+
+          <li>
+            <a href="CountryView.html" class="">
+              <div class="inactive">
+                <span class="icon"><img src="../assets/visibility.png"/></span>
+              <span class="item">Country View</span>
+              </div>
+            </a>
+          </li>
+
+          <li class="DropdownContain">
+            <!-- <a onclick="myFunction()">
+              <div class="inactive">
+                <span class="icon"><img src="../assets/storefront.png"/></span>
+              <span class="item">Resturant</span>
+              <span class="icondrop"><img src="../assets/dropdown.png" width="30px" height="30px" /></span>
+              </div>
+            </a> -->
+            <!-- <div id="myDropdown" class="dropdown-content">
+            
+              <p>  
+              <input type="radio" name="resturant" id="Resturant" value="resturant">
+              <label for="Resturant">Resturant</label><br/>
+              </p>
+              <p style="margin-top: 10px;">
+              <input type="radio" name="resturant" id="AddNewResturant" value="addNewResturant">
+              <label for="AddNewResturant">Add New Resturant</label>
+              
+              </p>
+              </div>   -->
+              <button class="dropdown-btn" onclick="Drops()">
+               <div style="width: 100%; display: flex;justify-content: space-between;">
+                <div style="display: flex;">
+                  <span class="icon"><img src="../assets/storefront.png"/></span> 
+                <span class="item">Resturant</span>
+                </div>
+                <div class="drops">
+                  <i class="fa fa-caret-down"></i>
+                </div>
+               </div>
+              </button>
+              <div class="dropdown-container">
+                <p>  
+                  <input type="radio" name="resturant" id="Resturant" value="resturant">
+                  <label for="Resturant">Resturant</label><br/>
+                  </p>
+                  <p style="margin-top: 10px;">
+                  <input type="radio" name="resturant" id="AddNewResturant" value="addNewResturant">
+                  <label for="AddNewResturant">Add New Resturant</label>
+                  
+                  </p>
+              </div->
+            </li>
+            
+          <li>
+            <a href="" class="">
+              <div class="inactive">
+                <span class="icon"><img src="../assets/Graph.png"/></span>
+              <span class="item">Dashboard</span>
+              </div>
+            </a>
+          </li>
+
+          <li>
+            <a href="" class="">
+              <div class="inactive">
+                <span class="icon"><img src="../assets/Graph.png"/></span>
+              <span class="item">Dashboard</span>
+              </div>
+            </a>
+          </li>
+
+          <li>
+            <a href="" class="">
+              <div class="inactive">
+                <span class="icon"><img src="../assets/Graph.png"/></span>
+              <span class="item">Dashboard</span>
+              </div>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </div> 
+  </aside>
+    <nav class="nav">
+   <div style="background-color: gray;">
+    <div class="top"> </div>
+    <div style="display:flex">
+      <div>
+        <div class="total">
+          <img src="../assets/totaldriver.png" style="margin:10px" />
+          <span class="total-text">
+            <h3 >Total Driver</h3>
+          <p style="margin-left: 35px;font-size: 20px;font-weight: 700;">33</p>
+          </span>
+        </div>
+  
+        <div class="total">
+          <img src="../assets/totalrevenue.png" style="margin:10px" />
+          <span class="total-text">
+            <h3 >Total Revenue</h3>
+          <p style="margin-left: 35px;font-size: 20px;font-weight: 700;">$1,234,567</p>
+          </span>
+        </div>
+      </div>
+
+      <div style="margin-left:50px ;">
+        <div class="total">
+          <img src="../assets/totalsubscribers.png" style="margin:10px" />
+          <span class="total-text">
+            <h3 >Total Subscribers</h3>
+          <p style="margin-left: 35px;font-size: 20px;font-weight: 700;">33</p>
+          </span>
+        </div>
+  
+        <div class="total" >
+          <img src="../assets/totalbooking.png" style="margin:10px" />
+          <span class="total-text">
+            <h3 >Total Bookings</h3>
+          <p style="margin-left: 35px;font-size: 20px;font-weight: 700;">33</p>
+          </span>
+        </div>
+      </div>
+    </div>
+    <section style="display: flex;margin-right:250px">
+      <div class="userschart">
+        <div style="display: flex;">
+          <span>
+        <img src="../assets/Figpie.png"/>
+          </span>
+          <span>
+            <p style="display: flex;"><img src="../assets/completed.png" width="20px" height="20px" /><a style="font-size: 20px;margin-bottom:2px">Completed</a></p>
+            <p style="display: flex;"><img src="../assets/cancelled.png" width="20px" height="20px" /><a style="font-size: 20px;margin-bottom:2px">Cancelled</a></p>
+            <p style="display: flex;"><img src="../assets/active.png" width="20px" height="20px" /><a style="font-size: 20px;margin-bottom:2px">Active</a></p>
+            <p style="display: flex;"><img src="../assets/requests.png" width="20px" height="20px" /><a style="font-size: 20px;margin-bottom:2px">Request</a></p>
+          </span>
+        </div>
+      </div>
+      <div class="userschart">
+        <div style="display: flex;">
+          <span>
+        <img src="../assets/Figpie (2).png"/>
+          </span>
+          <span>
+            <p style="display: flex;"><img src="../assets/completed.png" width="20px" height="20px" /><a style="font-size: 20px;margin-bottom:2px">Completed</a></p>
+           <p style="display: flex;"><img src="../assets/active.png" width="20px" height="20px" /><a style="font-size: 20px;margin-bottom:2px">Active</a></p>
+           </span>
+        </div>
+      </div>
+    </section>
+    <section style="display: flex;margin-right:250px">
+      <div class="userschart">
+        <div style="display: flex;">
+          <span>
+        <img src="../assets/Figpie (1).png"/>
+          </span>
+          <span>
+            <p style="display: flex;"><img src="../assets/completed.png" width="20px" height="20px" /><a style="font-size: 20px;margin-bottom:2px">Completed</a></p>
+            <p style="display: flex;"><img src="../assets/active.png" width="20px" height="20px" /><a style="font-size: 20px;margin-bottom:2px">Active</a></p>
+          </span>
+        </div>         
+      </div>
+      <div class="userschart"> 
+        <div style="display: flex;">
+          <span>
+        <img src="../assets/Figpie (3).png"/>
+          </span>
+          <span>
+            <p style="display: flex;"><img src="../assets/completed.png" width="20px" height="20px" /><a style="font-size: 20px;margin-bottom:2px">Completed</a></p>
+            <p style="display: flex;"><img src="../assets/active.png" width="20px" height="20px" /><a style="font-size: 20px;margin-bottom:2px">Active</a></p>
+          </span>
+        </div>
+      </div>
+    </section>
+   </div>
+      </nav>
+  </body>
+</html>
